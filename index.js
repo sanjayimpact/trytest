@@ -6,9 +6,8 @@ puppeteer.use(StealthPlugin());
 const run = async () => {
   console.log('🚀 Launching Chromium...');
   const browser = await puppeteer.launch({
-    headless: false,
-    // executablePath: '/usr/bin/chromium-browser', // Ubuntu
-    // or '/usr/bin/chromium' on Amazon Linux
+    headless: true,
+    
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
 
